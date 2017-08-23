@@ -1,11 +1,11 @@
 ﻿using System;
 using System.IO;
-using System.Threading.Tasks;
 using Calculator.Messages.Commands;
 using Calculator.Messages.Events;
+using Calculator.Program.Handlers;
+using Calculator.Program.Services;
 using Rebus.Activation;
 using Rebus.Config;
-using Rebus.Handlers;
 using Rebus.Logging;
 using Rebus.Persistence.FileSystem;
 using Rebus.Routing.TypeBased;
@@ -14,8 +14,10 @@ namespace Calculator.Program
 {
     class Program
     {
-        static readonly string JsonFilePath =
+        static readonly string JsonFilePath = 
             Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "rebus_subscriptions.json");
+
+        private static CalculatorService _calculatorService;
 
         static void Main()
         {
@@ -32,9 +34,12 @@ namespace Calculator.Program
 
                 activator.Bus.Subscribe<ResultReceivedEvent>();
 
+                _calculatorService = new CalculatorService(activator.Bus);
+
                 while (true)
                 {
                     Console.WriteLine(@"1) Add 1 + 2
+2) Add 2 + 3
 q) Quit");
 
                     var keyChar = char.ToLower(Console.ReadKey(true).KeyChar);
@@ -42,14 +47,18 @@ q) Quit");
                     switch (keyChar)
                     {
                         case '1':
-                            activator.Bus.Publish(new AddTwoNumbersCommand(1, 2)).Wait();
+                            _calculatorService.Add(1, 2);
+                            break;
+
+                        case '2':
+                            _calculatorService.Add(2, 3);
                             break;
 
                         case 'q':
                             goto consideredHarmful;
 
                         default:
-                            Console.WriteLine("There's no option ({0})", keyChar);
+                            Console.WriteLine("Invalid key ({0})", keyChar);
                             break;
                     }
                 }
@@ -57,14 +66,6 @@ q) Quit");
                 consideredHarmful:
                 Console.WriteLine("Quitting!");
             }
-        }
-    }
-
-    public class ResultReceivedEventHandler : IHandleMessages<ResultReceivedEvent>
-    {
-        public async Task Handle(ResultReceivedEvent message)
-        {
-            Console.WriteLine(message.Result);
         }
     }
 }

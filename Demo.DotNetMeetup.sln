@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26430.15
+VisualStudioVersion = 15.0.26730.10
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Calculator", "Calculator", "{2B5292CA-EC52-451D-BD9E-C97EAF524E0A}"
 EndProject
@@ -10,6 +10,12 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calculator.Program", "Calculator.Program\Calculator.Program.csproj", "{605B32D4-136E-41DC-AF23-6A3A5AA46F97}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calculator.Messages", "Calculator.Messages\Calculator.Messages.csproj", "{0F05B970-04EA-41DF-9EED-C98BF11F9437}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{9BBA6DA4-E9E5-47E6-A6B1-B13A62E27C2E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calculator.UnitTests", "Calculator.UnitTests\Calculator.UnitTests.csproj", "{8099CB87-A7EB-4BA6-B3F8-27DBA2C95462}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calculator.IntegrationTests", "Calculator.IntegrationTests\Calculator.IntegrationTests.csproj", "{F95F9807-A0D0-48A0-B643-7F1E4F8ACCBB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,6 +35,14 @@ Global
 		{0F05B970-04EA-41DF-9EED-C98BF11F9437}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0F05B970-04EA-41DF-9EED-C98BF11F9437}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0F05B970-04EA-41DF-9EED-C98BF11F9437}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8099CB87-A7EB-4BA6-B3F8-27DBA2C95462}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8099CB87-A7EB-4BA6-B3F8-27DBA2C95462}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8099CB87-A7EB-4BA6-B3F8-27DBA2C95462}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8099CB87-A7EB-4BA6-B3F8-27DBA2C95462}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F95F9807-A0D0-48A0-B643-7F1E4F8ACCBB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F95F9807-A0D0-48A0-B643-7F1E4F8ACCBB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F95F9807-A0D0-48A0-B643-7F1E4F8ACCBB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F95F9807-A0D0-48A0-B643-7F1E4F8ACCBB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -37,5 +51,10 @@ Global
 		{2F80B084-B4F4-4713-854C-E2559264B808} = {2B5292CA-EC52-451D-BD9E-C97EAF524E0A}
 		{605B32D4-136E-41DC-AF23-6A3A5AA46F97} = {2B5292CA-EC52-451D-BD9E-C97EAF524E0A}
 		{0F05B970-04EA-41DF-9EED-C98BF11F9437} = {2B5292CA-EC52-451D-BD9E-C97EAF524E0A}
+		{8099CB87-A7EB-4BA6-B3F8-27DBA2C95462} = {9BBA6DA4-E9E5-47E6-A6B1-B13A62E27C2E}
+		{F95F9807-A0D0-48A0-B643-7F1E4F8ACCBB} = {9BBA6DA4-E9E5-47E6-A6B1-B13A62E27C2E}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {41EAF48A-028D-46C3-AE75-A5B19067B98B}
 	EndGlobalSection
 EndGlobal

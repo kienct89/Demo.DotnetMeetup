@@ -54,6 +54,8 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Handlers\ResultReceivedEventHandler.cs" />
+    <Compile Include="Services\CalculatorService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
