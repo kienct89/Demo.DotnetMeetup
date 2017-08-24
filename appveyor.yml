@@ -13,9 +13,8 @@ cache:
 nuget:
   project_feed: true
 artifacts:
-  - path: CalculatorApi.zip
-    name: CalculatorApi
-    type: WebDeployPackage
+- path: CalculatorApi
+  type: WebDeployPackage
 before_build:
 - nuget restore
 - ps: Write-Host "Hey .NET community"
@@ -33,4 +32,4 @@ deploy:
   remove_files: true
   app_offline: true
   sync-retry-attempts: 2
-  artifact: CalculatorApi.zip
+  artifact: CalculatorApi
