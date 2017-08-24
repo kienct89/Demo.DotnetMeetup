@@ -9,6 +9,11 @@ namespace Calculator.API.Controllers
         [Route("add/{first}/{second}")]
         public IHttpActionResult Add([FromUri] int first, [FromUri] int second)
         {
+
+            // WARNING: the COMPILER CAN'T DETECT THIS
+#if RELEASE
+             JsonConvert.DeserializeObject("test");
+#endif
             return Ok(first + second);
         }
     }
