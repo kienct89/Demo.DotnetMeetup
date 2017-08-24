@@ -7,6 +7,7 @@ using Rebus.Config;
 using Rebus.Persistence.InMem;
 using Rebus.Routing.TypeBased;
 using Rebus.Transport.InMem;
+// ReSharper disable AccessToDisposedClosure
 
 namespace Add.Program
 {
@@ -18,11 +19,6 @@ namespace Add.Program
             using (var activator = new BuiltinHandlerActivator())
             {
                 activator.Register(() => new AddTwoNumbersHandler(activator.Bus));
-
-                //                activator.Handle<AddTwoNumbersCommand>(async msg =>
-                //                {
-                //                    await activator.Bus.Publish(new ResultReceivedEvent(msg.First + msg.Second));
-                //                });
 
                 Configure.With(activator)
                     .Logging(l => l.ColoredConsole())
@@ -36,7 +32,7 @@ namespace Add.Program
 
                 activator.Bus.Subscribe<AddTwoNumbersCommand>().Wait();
 
-                Console.WriteLine("This is Subscriber 1");
+                Console.WriteLine("===== ADD PROGRAM =====");
                 Console.WriteLine("Press ENTER to quit");
                 Console.ReadLine();
                 Console.WriteLine("Quitting...");
