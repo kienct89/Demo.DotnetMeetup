@@ -9,3 +9,15 @@ Scenario: Add two numbers
 	And I also have entered 70 into the calculator
 	When I press add
 	Then 1 event should be dispatched to the event bus
+
+@add
+Scenario Outline: Add two numbers (2)
+	Given I have entered <first> into the calculator
+	And I also have entered <second> into the calculator
+	When I press add
+	Then 1 event should be dispatched to the event bus
+
+	Examples: 
+		| first | second |
+		| 1     | 2      |
+		| 3     | 4      |
