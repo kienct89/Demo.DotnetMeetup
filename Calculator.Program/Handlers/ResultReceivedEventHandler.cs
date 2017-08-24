@@ -10,7 +10,7 @@ namespace Calculator.Program.Handlers
     {
         public async Task Handle(ResultReceivedEvent message)
         {
-            Console.WriteLine(message.Result);
+            Console.WriteLine($"THE RESULT IS {message.Result}");
         }
     }
 }

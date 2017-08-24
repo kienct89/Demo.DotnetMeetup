@@ -14,7 +14,8 @@ namespace Calculator.API.Controllers
 #if !DEBUG
              // JsonConvert.DeserializeObject("test");
 #endif
-            return Ok(first + second);
+            var result = first + second;
+            return Ok(result);
         }
     }
 }
