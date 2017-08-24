@@ -11,7 +11,7 @@ namespace Calculator.API.Controllers
         {
 
             // WARNING: the COMPILER CAN'T DETECT THIS
-#if RELEASE
+#if !DEBUG
              JsonConvert.DeserializeObject("test");
 #endif
             return Ok(first + second);
