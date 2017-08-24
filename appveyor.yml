@@ -33,4 +33,4 @@ deploy:
   remove_files: true
   app_offline: true
   sync-retry-attempts: 2
-  artifact: CalculatorApi
+  artifact: Calculator.API.zip
