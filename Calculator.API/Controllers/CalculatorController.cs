@@ -9,9 +9,7 @@ namespace Calculator.API.Controllers
         [Route("add/{first}/{second}")]
         public IHttpActionResult Add([FromUri] int first, [FromUri] int second)
         {
-
-            // WARNING: the COMPILER CAN'T DETECT THIS
-            var result = first + second;
+            var result = first + second + 10000;
             return Ok(result);
         }
     }
