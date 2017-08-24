@@ -22,6 +22,7 @@ build:
   parallel: true
   project: Demo.DotNetMeetup.sln
   verbosity: minimal
+  publish_wap: true
 deploy:
 - provider: WebDeploy
   server: https://calculator-meetup.scm.azurewebsites.net:443/msdeploy.axd?site=calculator-meetup
