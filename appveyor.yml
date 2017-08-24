@@ -29,7 +29,7 @@ deploy:
   website: calculator-meetup
   username: $calculator-meetup
   password:
-    scure: aAQLeJlot/LZfDLbiJilNG+6wXPQrUh3JTwcd6tDBMIx9N7ExlUBNRgpF8PxztfPFWIK0bSlHY4I6D33OlETkg==
+    secure: aAQLeJlot/LZfDLbiJilNG+6wXPQrUh3JTwcd6tDBMIx9N7ExlUBNRgpF8PxztfPFWIK0bSlHY4I6D33OlETkg==
   remove_files: true
   app_offline: true
   sync-retry-attempts: 2
