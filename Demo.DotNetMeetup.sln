@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calculator.UnitTests", "Cal
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calculator.IntegrationTests", "Calculator.IntegrationTests\Calculator.IntegrationTests.csproj", "{F95F9807-A0D0-48A0-B643-7F1E4F8ACCBB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calculator.API", "Calculator.API\Calculator.API.csproj", "{F1A9F20B-90F3-4E9E-8C30-F5E549C9EB74}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -43,6 +45,10 @@ Global
 		{F95F9807-A0D0-48A0-B643-7F1E4F8ACCBB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F95F9807-A0D0-48A0-B643-7F1E4F8ACCBB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F95F9807-A0D0-48A0-B643-7F1E4F8ACCBB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F1A9F20B-90F3-4E9E-8C30-F5E549C9EB74}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1A9F20B-90F3-4E9E-8C30-F5E549C9EB74}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1A9F20B-90F3-4E9E-8C30-F5E549C9EB74}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1A9F20B-90F3-4E9E-8C30-F5E549C9EB74}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -53,6 +59,7 @@ Global
 		{0F05B970-04EA-41DF-9EED-C98BF11F9437} = {2B5292CA-EC52-451D-BD9E-C97EAF524E0A}
 		{8099CB87-A7EB-4BA6-B3F8-27DBA2C95462} = {9BBA6DA4-E9E5-47E6-A6B1-B13A62E27C2E}
 		{F95F9807-A0D0-48A0-B643-7F1E4F8ACCBB} = {9BBA6DA4-E9E5-47E6-A6B1-B13A62E27C2E}
+		{F1A9F20B-90F3-4E9E-8C30-F5E549C9EB74} = {2B5292CA-EC52-451D-BD9E-C97EAF524E0A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {41EAF48A-028D-46C3-AE75-A5B19067B98B}

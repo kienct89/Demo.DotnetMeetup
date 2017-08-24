@@ -12,9 +12,25 @@ cache:
   - packages -> **\packages.config
 nuget:
   project_feed: true
+artifacts:
+  - path: CalculatorApi.zip
+    name: CalculatorApi
+    type: WebDeployPackage
 before_build:
 - nuget restore
+- ps: Write-Host "Hey .NET community"
 build:
   parallel: true
   project: Demo.DotNetMeetup.sln
   verbosity: minimal
+deploy:
+- provider: WebDeploy
+  server: https://calculator-meetup.scm.azurewebsites.net:443/msdeploy.axd?site=calculator-meetup
+  website: calculator-meetup
+  username: $calculator-meetup
+  password:
+    scure: aAQLeJlot/LZfDLbiJilNG+6wXPQrUh3JTwcd6tDBMIx9N7ExlUBNRgpF8PxztfPFWIK0bSlHY4I6D33OlETkg==
+  remove_files: true
+  app_offline: true
+  sync-retry-attempts: 2
+  artifact: CalculatorApi.zip
